@@ -52,36 +52,43 @@ variable "access_tier" {
 }
 
 variable "blob_soft_delete_retention_days" {
+  type = number
   description = "Specifies the number of days that the blob should be retained, between `1` and `365` days. Defaults to `7`"
   default     = 7
 }
 
 variable "container_soft_delete_retention_days" {
+  type = number
   description = "Specifies the number of days that the blob should be retained, between `1` and `365` days. Defaults to `7`"
   default     = 7
 }
 
 variable "enable_versioning" {
+  type = bool
   description = "Is blob versioning enabled? Default to `false`"
   default     = false
 }
 
 variable "last_access_time_enabled" {
+  type = bool
   description = "Is the last access time based tracking enabled? Default to `false`"
   default     = false
 }
 
 variable "change_feed_enabled" {
+  type = bool
   description = "Is the blob service properties for change feed events enabled ?"
   default     = false
 }
 
 variable "enable_advanced_threat_protection" {
+  type = bool
   description = "Is advanced threat protection enabled."
   default     = false
 }
 
 variable "is_hns_enabled" {
+  type = bool
   description = "Is Hierarchical namespace enabled. This can only be true when sku is Standard or when account_tier is Premium and account_kind is BlockBlobStorage"
   default     = false
 }
