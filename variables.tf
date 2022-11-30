@@ -94,6 +94,7 @@ variable "is_hns_enabled" {
 }
 
 variable "shared_access_key_enabled" {
+  type        = bool
   description = "Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD)."
   default     = true
 }
